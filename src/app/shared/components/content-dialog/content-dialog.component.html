@@ -1,0 +1,15 @@
+<div class="d-flex flex-column">
+  <div class="d-flex justify-content-center">
+    <h2 class="text-secondary">{{title}}</h2>
+  </div>
+
+  <div class="dialog-content-area">
+    <ng-content></ng-content>
+  </div>
+
+  <div class="d-flex justify-content-end mt-3">
+    <button type="submit" class="btn btn-outline-success" (click)="okClick()">{{ okButtonTitle }}</button>
+    <button type="button" mat-raised-button class="ml-4" color="primary" (click)="cancelClick()">{{cancelButtonTitle}}</button>
+  </div>
+
+</div>

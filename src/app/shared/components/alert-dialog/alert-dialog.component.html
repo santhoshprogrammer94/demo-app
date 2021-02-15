@@ -1,0 +1,9 @@
+<div class="alert-dialog d-flex flex-column">
+  <h2>{{ data.title }}</h2>
+  <p>{{ data.message }}</p>
+  <div class="d-flex flex-row-reverse">
+    <button type="button" mat-raised-button class="ml-4" color="primary" (click)="cancelClick()">CANCEL</button>
+    <button *ngIf="data.alertType === AlertType.POSITIVE" type="submit" class="btn btn-outline-success" (click)="grantAlertClick()">{{ data.grantButtonTitle }}</button>
+    <button *ngIf="data.alertType === AlertType.NEGATIVE" type="submit" class="btn btn-outline-danger" (click)="grantAlertClick()">{{ data.grantButtonTitle }}</button>
+  </div>
+</div>
